@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dutch Treat: @ViewBag.Title</title>
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="container">
+        <h1>Welcome to Dutch Treat</h1>
+        <menu>
+            <ul>
+                <li><a asp-controller="App" asp-action="Index">home</a></li>
+                <li><a asp-controller="App" asp-action="Contact">contact</a></li>
+                <li><a asp-controller="App" asp-action="About">about</a></li>
+            </ul>
+        </menu>
+    </header>
+    <section class="container">
+        <h2>@ViewBag.Title</h2>
+        @RenderBody()
+    </section>
+    <footer class="container"><div class="text-center">Copyright 2017</div></footer>
+
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/index.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>
