@@ -8,16 +8,30 @@
         <div class="card card-body bg-light">
             <form method="post">
                 <div asp-validation-summary="ModelOnly"></div>
-                <label asp-for="Name">Your Name:</label><br />
-                <input asp-for="Name" /><span asp-validation-for="Name"></span><br />
-                <label asp-for="Email">Email:</label><br />
-                <input type="email" asp-for="Email" /><span asp-validation-for="Email"></span><br />
-                <label asp-for="Subject">Subject:</label><br />
-                <input type="text" asp-for="Subject" /><span asp-validation-for="Subject"></span><br />
-                <label asp-for="Message">Message:</label><br />
-                <textarea rows="4" asp-for="Message">Some whatever</textarea><span asp-validation-for="Message"></span><br />
-                <input type="submit" value="Send Message" />
-                <div>@ViewBag.UserMessage</div>
+                <div class="form-group">
+                    <label asp-for="Name">Your Name:</label>
+                    <input class="form-control" asp-for="Name" />
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Email:</label>
+                    <input class="form-control" type="email" asp-for="Email" />
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subject">Subject:</label>
+                    <input class="form-control" type="text" asp-for="Subject" />
+                    <span class="text-danger" asp-validation-for="Subject"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Message">Message:</label>
+                    <textarea class="form-control" rows="4" asp-for="Message">Some whatever</textarea>
+                    <span class="text-danger" asp-validation-for="Message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Send Message" />
+                    <div class="text-success">@ViewBag.UserMessage</div>
+                </div>
             </form>
         </div>
     </div>
