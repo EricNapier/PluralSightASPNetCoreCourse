@@ -1,0 +1,15 @@
+These are commands I executed in the course of writing this project.
+Unless otherwise noted, all these commands were executed from a powershell prompt in the location whatever\whatever\DutchTreat\DutchTreat
+
+//Node package manager js library installs
+npm install jquery-validation
+npm install jquery-validation-unobtrusive
+npm install font-awesome
+
+//create local development database
+//(after writing all the db context and startup config code)
+dotnet ef database update
+//create the migration. "MyInitialDb" is not special. I could have given it any name.
+dotnet ef migrations add MyInitialDb
+//run the migration (creates the tables)
+dotnet ef database update
