@@ -13,3 +13,8 @@ dotnet ef database update
 dotnet ef migrations add MyInitialDb
 //run the migration (creates the tables)
 dotnet ef database update
+
+//create some migration seed data
+//Looks like this is using the OnModelCreating override within DutchContext to find some sample data.
+//Not totally sure about it, but I think the OnModelCreating is not the optimal place, anyway.
+dotnet ef migrations add SeedData
